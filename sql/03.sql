@@ -4,7 +4,7 @@
  * NOTE:
  * Your results should not contain any duplicate titles.
  */
-SELECT title, rating
+SELECT title --, rating
 FROM film
 WHERE title IN (
 SELECT title
@@ -15,4 +15,4 @@ WHERE name = 'Children'
 )
 AND
 rating IN ('R', 'NC-17')
-ORDER BY rating, title;
+ORDER BY title;
